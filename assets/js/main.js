@@ -107,9 +107,11 @@ console.log('Ejercico _3_a  ->', twitter); // https://twitter.com/hearsparkbox
  _3_b Convertir exampleFunction en una arrow function de una sola linea..., sugar sintax.
 */
 
-function exampleFunction(fecha) {
+/* function exampleFunction(fecha) {
     return `Code is fun, I love Javascript today: ${fecha}`;
-}
+} */
+
+const exampleFunction = (fecha) => `Code is fun, I love Javascript today: ${fecha}`;
 
 console.log('Ejercicio _3_b ->', exampleFunction(Date()))
 
