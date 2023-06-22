@@ -98,7 +98,7 @@ const profile = {
     }
 }
 
-const twitter = ``
+const twitter = {instagram} = {social} = profile
 
 console.log('Ejercico _3_a  ->', twitter); // https://twitter.com/hearsparkbox
 
