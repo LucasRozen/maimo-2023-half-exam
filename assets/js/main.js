@@ -174,7 +174,7 @@ const semiFinalistasZonaB = zonaB.filter(({semiFinalista})=>semiFinalista);
 
 const semiFinal = [...semiFinalistasZonaA, ...semiFinalistasZonaB];
 
-const final = ``
+const final = semiFinal.filter(({pais})=> pais==="Argentina" || pais==="Brasil")
 
 const finalResultado = ``
 
