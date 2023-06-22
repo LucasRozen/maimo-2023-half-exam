@@ -172,7 +172,7 @@ const zonaB = [
 const semiFinalistasZonaA = zonaA.filter(({semiFinalista})=>semiFinalista);
 const semiFinalistasZonaB = zonaB.filter(({semiFinalista})=>semiFinalista);
 
-const semiFinal = ``
+const semiFinal = [...semiFinalistasZonaA, ...semiFinalistasZonaB];
 
 const final = ``
 
