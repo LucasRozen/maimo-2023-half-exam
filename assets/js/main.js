@@ -25,7 +25,9 @@ const people = [
     { name: "Anneli", role: "junior" }
 ]
 
-const message = ``
+const message = `hay ${people.length} personas en el ${teamName} team.\n
+Sus nombres son ${people.map( ({name}, i) => name  (i !== people.length - 1 ) && + ", " )}.\n
+${people.filter(({role})=>(role==="senior")).length} de ellos son senior con experiencia\n`
 
 console.log('Ejercico _1  ->', message)
 
@@ -55,17 +57,22 @@ const myObjects = [
 
 const detectCollision = (objects, point) => {
 
-    for (let i = 0; i < objects.length; i++) {
+    /* for (let i = 0; i < objects.length; i++) {
         let object = objects[i]
         if (point.x >= object.x && point.x <= object.x + object.width &&
             point.y >= object.y && point.y <= object.y + object.height)
             return object
-    }
+    } */
 
     //Comentar el for y colocar acá la respuesta
+    const { x: pointX, y: pointY } = point;
+    
+    
+    const objetoEncontrado = objects.find( ({x, y, width, height}) => (pointX >= x && pointX <= x + width && pointY >= y && pointY <= y + height));
 
-   // const { x: pointX, y: pointY } = point
-   // return true
+
+    return (objetoEncontrado !== undefined) ? objetoEncontrado : false;
+
 
 }
 
