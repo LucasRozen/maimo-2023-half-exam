@@ -98,7 +98,7 @@ const profile = {
     }
 }
 
-const twitter = ``
+const twitter = {instagram} = {social} = profile
 
 console.log('Ejercico _3_a  ->', twitter); // https://twitter.com/hearsparkbox
 
@@ -107,9 +107,11 @@ console.log('Ejercico _3_a  ->', twitter); // https://twitter.com/hearsparkbox
  _3_b Convertir exampleFunction en una arrow function de una sola linea..., sugar sintax.
 */
 
-function exampleFunction(fecha) {
+/* function exampleFunction(fecha) {
     return `Code is fun, I love Javascript today: ${fecha}`;
-}
+} */
+
+const exampleFunction = (fecha) => `Code is fun, I love Javascript today: ${fecha}`;
 
 console.log('Ejercicio _3_b ->', exampleFunction(Date()))
 
@@ -127,14 +129,18 @@ const operaciones = [
     { num1: 60, num2: 0 },
 ]
 
-console.log('Ejercicio _3_c ->', ``)
+
+
+console.log('Ejercicio _3_c ->', operaciones.map(({num1,num2})=>num1*num2))
 
 
 
 /*
 _4 Filter, Rest Operators (4 Puntos)
 
-_4_a Obtener los semifinalistas (true) de cada grupo en dos arrays (Nombre: semiFinalistasZonaA, Nombre: semiFinalistasZonaAB) utilizando filter(), luego unir todos los objetos en otro array (Nombre: semiFinal) mediante Rest operator (...)
+_4_a Obtener los semifinalistas (true) de cada grupo en dos arrays 
+(Nombre: semiFinalistasZonaA, Nombre: semiFinalistasZonaAB) utilizando filter(), 
+luego unir todos los objetos en otro array (Nombre: semiFinal) mediante Rest operator (...)
  
 _4_b Obtener un array (Nombre: final) con los objetos de Argentina y Brasil. Utilizar if ternario y el operador || (or): 
 //cond ? true (objeto) : false
@@ -163,8 +169,8 @@ const zonaB = [
 ]
 
 
-const semiFinalistasZonaA = ``
-const semiFinalistasZonaB = ``
+const semiFinalistasZonaA = zonaA.filter(({semiFinalista})=>semiFinalista);
+const semiFinalistasZonaB = zonaB.filter(({semiFinalista})=>semiFinalista);
 
 const semiFinal = ``
 
