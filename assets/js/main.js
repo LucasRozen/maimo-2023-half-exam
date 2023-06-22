@@ -129,7 +129,9 @@ const operaciones = [
     { num1: 60, num2: 0 },
 ]
 
-console.log('Ejercicio _3_c ->', ``)
+
+
+console.log('Ejercicio _3_c ->', operaciones.map(({num1,num2})=>num1*num2))
 
 
 
