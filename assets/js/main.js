@@ -174,10 +174,13 @@ const semiFinalistasZonaB = zonaB.filter(({semiFinalista})=>semiFinalista);
 
 const semiFinal = [...semiFinalistasZonaA, ...semiFinalistasZonaB];
 
-const final = semiFinal.filter(({pais})=> pais==="Argentina" || pais==="Brasil");
+const final = semiFinal.filter(({pais})=> pais === "Argentina" || pais==="Brasil");
 
 const finalResultado = final.map((pais)=>pais={goles: Math.floor(Math.random() * 101),...pais});
 
-const campeon = ``;
+const campeon = `el campeón es: 
+${(finalResultado[0].goles > finalResultado[1].goles) && finalResultado[0].pais }
+${(finalResultado[1].goles > finalResultado[0].goles) && finalResultado[1].pais }
+${(finalResultado[1].goles === finalResultado[0].goles) && "el que haya ganado los penales"}`
 
 console.log('Ejercicio _4 ->', campeon);
