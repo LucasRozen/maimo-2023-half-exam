@@ -174,9 +174,9 @@ const semiFinalistasZonaB = zonaB.filter(({semiFinalista})=>semiFinalista);
 
 const semiFinal = [...semiFinalistasZonaA, ...semiFinalistasZonaB];
 
-const final = semiFinal.filter(({pais})=> pais==="Argentina" || pais==="Brasil")
+const final = semiFinal.filter(({pais})=> pais==="Argentina" || pais==="Brasil");
 
-const finalResultado = ``
+const finalResultado = final.map((pais)=>pais={goles: Math.floor(Math.random() * 101),...pais});
 
 const campeon = ``;
 
