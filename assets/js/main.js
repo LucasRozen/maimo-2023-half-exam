@@ -26,7 +26,7 @@ const people = [
 ]
 
 const message = `hay ${people.length} personas en el ${teamName} team.\n
-Sus nombres son ${people.map( ({name}, i) => name  (i !== people.length - 1 ) && + ", " )}.\n
+Sus nombres son ${people.map( ({name}) => name )}.\n
 ${people.filter(({role})=>(role==="senior")).length} de ellos son senior con experiencia\n`
 
 console.log('Ejercico _1  ->', message)
